@@ -8,10 +8,10 @@ def run(app, db):
         title = body.get("title")
         description = body.get("description")
         
-        if (not title) or (not isinstance(title, str)):
+        if not title or not isinstance(title, str):
             return { "error": "You must pass a string title in body" }, 400
             
-        if (not description) or (not isinstance(description, str)):
+        if not description or not isinstance(description, str):
             return { "error": "You must pass a string description in body" }, 400
             
         allTasks = db.all()

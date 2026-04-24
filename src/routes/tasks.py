@@ -32,7 +32,7 @@ def run(app, db):
             Tasks.completed == completed
         )
         
-        if (not tasks):
+        if not tasks:
             return { "error": "Tasks not found" }, 404
             
         return tasks, 200
